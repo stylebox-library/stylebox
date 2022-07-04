@@ -30,6 +30,7 @@
     "utils",
     "tool",
     "tools",
+    "toolbox",
     "stylebox"
   ],
   "scripts": {
