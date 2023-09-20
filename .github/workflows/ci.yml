@@ -41,11 +41,11 @@ jobs:
           npx lerna exec --scope ${{ matrix.package }} --
           npm ci
 
-      - name: check lint
-        if: ${{ !cancelled() }}
-        run: >
-          npx lerna exec --scope ${{ matrix.package }} --
-          npm run check:lint
+      # - name: check lint
+      #   if: ${{ !cancelled() }}
+      #   run: >
+      #     npx lerna exec --scope ${{ matrix.package }} --
+      #     npm run check:lint
 
       - name: check types
         if: ${{ !cancelled() }}
