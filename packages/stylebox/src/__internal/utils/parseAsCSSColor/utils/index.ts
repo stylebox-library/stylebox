@@ -1,3 +1,5 @@
+import { clamp } from '../../../../__internal'
+
 export type TColorTuple = [number, number, number]
 
 const RED = 0
@@ -58,35 +60,23 @@ export const numberToHex = (value: number): string => {
     : hex
 }
 
-const _clamp = (value: number) => {
-  if (value < 0) {
-    return 0
-  }
-
-  if (value > 1) {
-    return 1
-  }
-
-  return value
+export const darken = (tuple: TColorTuple, amount: number): void => {
+  tuple[LIGHTNESS] = clamp(tuple[LIGHTNESS] - amount, 0, 1)
 }
 
-export const darken = (tuple: TColorTuple, amount: number) => {
-  tuple[LIGHTNESS] = _clamp(tuple[LIGHTNESS] - amount)
+export const lighten = (tuple: TColorTuple, amount: number): void => {
+  tuple[LIGHTNESS] = clamp(tuple[LIGHTNESS] + amount, 0, 1)
 }
 
-export const lighten = (tuple: TColorTuple, amount: number) => {
-  tuple[LIGHTNESS] = _clamp(tuple[LIGHTNESS] + amount)
+export const saturate = (tuple: TColorTuple, amount: number): void => {
+  tuple[SATURATION] = clamp(tuple[SATURATION] + amount, 0, 1)
 }
 
-export const saturate = (tuple: TColorTuple, amount: number) => {
-  tuple[SATURATION] = _clamp(tuple[SATURATION] + amount)
+export const desaturate = (tuple: TColorTuple, amount: number): void => {
+  tuple[SATURATION] = clamp(tuple[SATURATION] - amount, 0, 1)
 }
 
-export const desaturate = (tuple: TColorTuple, amount: number) => {
-  tuple[SATURATION] = _clamp(tuple[SATURATION] - amount)
-}
-
-export const convertToRGB = (tuple: TColorTuple) => {
+export const convertToRGB = (tuple: TColorTuple): void => {
   const saturation = tuple[SATURATION]
   const lightness = tuple[LIGHTNESS]
 
@@ -136,7 +126,7 @@ export const convertToRGB = (tuple: TColorTuple) => {
   }
 }
 
-export const parseAlpha = (value: number) => {
+export const parseAlpha = (value: number): number => {
   if (value < 0) {
     return 0
   }

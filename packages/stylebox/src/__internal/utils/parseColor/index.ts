@@ -1,15 +1,15 @@
 import type { CSSColorValueType } from '../../types'
 
-import parseCSSColor from '../parseCSSColor'
+// import parseCSSColor from '../parseCSSColor'
 
 type ColorValueType =
     number // 0xFFFFFF
     | string // '0xFFF'
     | CSSColorValueType // 'red'
 
-type ColorModificationType =
-    number // .5
-    | string // '50%'
+// type ColorModificationType =
+//     number // .5
+//     | string // '50%'
 
 type ColorType =
     ColorValueType

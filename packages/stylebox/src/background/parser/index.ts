@@ -1,5 +1,4 @@
 import {
-  isColor,
   parseAsCSSColor
 } from '../../__internal'
 
@@ -11,8 +10,7 @@ import {
 } from './utils'
 
 import {
-  type TBackgroundParserFunction,
-  type TBackgroundObject
+  type TBackgroundParserFunction
 } from '../types'
 
 export const parse: TBackgroundParserFunction = (

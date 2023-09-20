@@ -5,7 +5,7 @@ import { type SizeParserFunctionType } from '../types'
 const _parseObject = (styles: any, param1: any): boolean => {
   let isChanged = false
 
-  if (param1) {
+  if (typeof param1 === 'object' && param1 !== null) {
     if ('of' in param1) {
       const value = parseValue(param1.of)
 
