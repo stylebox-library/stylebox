@@ -1,3 +1,5 @@
+import { hasKeys } from '../__internal'
+
 import {
   type TOutlineFunction,
   type TOutlineFunctionReturn
@@ -12,10 +14,8 @@ const outline: TOutlineFunction = (param1?: any, param2?: any, param3?: any, par
 
   parse(styles, param1, param2, param3, param4)
 
-  for (const key in styles) {
-    if (styles.hasOwnProperty(key)) {
-      return styles
-    }
+  if (hasKeys(styles)) {
+    return styles
   }
 }
 

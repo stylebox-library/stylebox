@@ -10,7 +10,7 @@
 
 // TODO: ??? background('color', alpha)
 
-import type { TCSSMetaColor } from '__internal'
+import type { TCSSMetaColor } from '../../__internal'
 
 interface TURLImage {
   url: string

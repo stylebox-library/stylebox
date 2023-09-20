@@ -4,7 +4,7 @@ export const simpleDisplayMap = [
   'inlineBlock'
 ] as const
 
-export const parseSimpleDisplayOptions = (styles: any, key: string, options: any) => {
+export const parseSimpleDisplayOptions = (styles: any, key: string, options: any): void => {
   if (typeof options === 'object' && options !== null) {
     // convert 'inlineBlock' to 'inline-block', otherwise let it through
     styles.display = key === 'inlineBlock'
@@ -33,7 +33,7 @@ const positionValueMap = {
   sticky: 0
 } as const
 
-export const parseFlexDisplayOptions = (styles: any, key: string, options: any) => {
+export const parseFlexDisplayOptions = (styles: any, key: string, options: any): void => {
   if (typeof options === 'object' && options !== null) {
     // convert 'inlineFlex' to 'inline-flex', otherwise let it through
     styles.display = key === 'inlineFlex'
@@ -107,7 +107,7 @@ export const parseFlexDisplayOptions = (styles: any, key: string, options: any) 
 
 // -------------------------------------------------------------------------------------------------
 
-export const parseSecondaryOptions = (styles: any, options: any) => {
+export const parseSecondaryOptions = (styles: any, options: any): void => {
   if ('position' in options) {
     const position = options.position
 

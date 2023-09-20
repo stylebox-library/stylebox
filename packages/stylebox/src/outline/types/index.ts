@@ -3,7 +3,7 @@
 // TODO: style, color, width
 // TODO: default outline -> outline() / outline.default === '1px solid red'
 
-import type { TCSSMetaColor } from '@internal'
+import type { TCSSMetaColor } from '../../__internal'
 
 type TOutlineStyleKeyword =
     'auto'

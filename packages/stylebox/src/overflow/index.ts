@@ -1,3 +1,5 @@
+import { hasKeys } from '../__internal'
+
 import {
   type TOverflowFunction,
   type TOverflowFunctionReturn
@@ -12,10 +14,8 @@ const overflow: TOverflowFunction = (param1?: any, param2?: any) => {
 
   parse(styles, param1, param2)
 
-  for (const key in styles) {
-    if (styles.hasOwnProperty(key)) {
-      return styles
-    }
+  if (hasKeys(styles)) {
+    return styles
   }
 }
 

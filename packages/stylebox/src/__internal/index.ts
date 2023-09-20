@@ -22,3 +22,17 @@ export const parseValue = (value: any): null | number | string => {
 
   return value
 }
+
+const _hasOwnProperty = Object.prototype.hasOwnProperty
+
+export const hasKeys = (object: any): boolean => {
+  if (typeof object === 'object' && object !== null) {
+    for (const key in object) {
+      if (_hasOwnProperty.call(object, key)) {
+        return true
+      }
+    }
+  }
+
+  return false
+}

@@ -1,5 +1,7 @@
 // TODO: margin('none') => margin: 0
 
+import { hasKeys } from '../__internal'
+
 import {
   type TMarginFunction,
   type TMarginFunctionReturn
@@ -14,10 +16,8 @@ const margin: TMarginFunction = (param1?: any, param2?: any, param3?: any, param
 
   parse(styles, param1, param2, param3, param4)
 
-  for (const key in styles) {
-    if (styles.hasOwnProperty(key)) {
-      return styles
-    }
+  if (hasKeys(styles)) {
+    return styles
   }
 }
 

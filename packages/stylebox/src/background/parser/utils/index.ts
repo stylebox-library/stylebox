@@ -12,7 +12,7 @@ const anglePattern = /^[-\.\d]+(?:deg|grad|rad|turn)$/
 const sidePattern = /^to (?:left|right|top|bottom)$/
 const cornerPattern = /^to (?:top left|top right|bottom left|bottom right)$/
 
-export const isDirection = (value: any) => {
+export const isDirection = (value: any): boolean => {
   if (typeof value === 'string' && value.length > 0) {
     return anglePattern.test(value) ||
         sidePattern.test(value) ||

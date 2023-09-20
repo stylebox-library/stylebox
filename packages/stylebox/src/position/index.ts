@@ -1,3 +1,5 @@
+import { hasKeys } from '../__internal'
+
 import {
   type TPositionFunction,
   type TPositionFunctionReturn
@@ -12,10 +14,8 @@ const position: TPositionFunction = (param1?: any, param2?: any, param3?: any) =
 
   parse(styles, param1, param2, param3)
 
-  for (const key in styles) {
-    if (styles.hasOwnProperty(key)) {
-      return styles
-    }
+  if (hasKeys(styles)) {
+    return styles
   }
 }
 

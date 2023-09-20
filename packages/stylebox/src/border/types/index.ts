@@ -31,9 +31,7 @@ type TBorderPart =
     // width, style, color
     | [number | string, TBorderStyle, TCSSMetaColor]
 
-interface TBorderRadiusObject {
-
-}
+// interface TBorderRadiusObject {}
 
 export interface TBorderObject {
   of?:

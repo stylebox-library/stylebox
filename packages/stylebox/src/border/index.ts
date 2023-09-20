@@ -1,3 +1,5 @@
+import { hasKeys } from '../__internal'
+
 import {
   type TBorderFunction,
   type TBorderFunctionReturn
@@ -17,10 +19,8 @@ const border: TBorderFunction = (
 
   parse(styles, param1, param2, param3, param4)
 
-  for (const key in styles) {
-    if (styles.hasOwnProperty(key)) {
-      return styles
-    }
+  if (hasKeys(styles)) {
+    return styles
   }
 }
 

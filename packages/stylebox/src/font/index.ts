@@ -1,3 +1,5 @@
+import { hasKeys } from '../__internal'
+
 import {
   type TFontFunction,
   type TFontFunctionReturn
@@ -12,10 +14,8 @@ const font: TFontFunction = (param1?: any) => {
 
   parse(styles, param1)
 
-  for (const key in styles) {
-    if (styles.hasOwnProperty(key)) {
-      return styles
-    }
+  if (hasKeys(styles)) {
+    return styles
   }
 }
 
