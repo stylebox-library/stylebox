@@ -6,12 +6,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stylebox-library.git"
+    "url": "git+https://github.com/stylebox-library/stylebox.git"
   },
   "bugs": {
-    "url": "https://github.com/stylebox-library/issues"
+    "url": "https://github.com/stylebox-library/stylebox/issues"
   },
-  "homepage": "https://github.com/stylebox-library/tree/main/packages/stylebox#readme",
+  "homepage": "https://github.com/stylebox-library/stylebox/tree/main/packages/stylebox#readme",
   "publishConfig": {
     "access": "public"
   },
