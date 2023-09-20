@@ -1,3 +1,4 @@
+
 // TODO: implement a $ function, that flattens the input arrays / objects (e.g.: export const style = $([ ... ]) )
 // TODO: provide types for export const styles (e.g.: StyleType)
 // TODO: provide proper intellisense when using the $ function
